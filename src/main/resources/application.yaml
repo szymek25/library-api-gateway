@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: library-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: users_route
+          uri: ${USER_SERVICE_ROUTE:http://localhost:8082}
+          predicates:
+            - Path=/users/**
+server:
+  port: 8081
+
+
