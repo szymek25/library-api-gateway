@@ -7,7 +7,7 @@ spring:
         - id: users_route
           uri: ${USER_SERVICE_ROUTE:http://localhost:8082}
           predicates:
-            - Path=/users/**
+            - Path=/user-service/**
 server:
   port: 8081
 
